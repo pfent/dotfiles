@@ -1,0 +1,11 @@
+[user]
+	email = philipp@fent.de
+	name = pfent
+[color]
+	ui = auto
+[push]
+	default = simple
+[core]
+	autocrlf = input
+[merge]
+	tool = meld
