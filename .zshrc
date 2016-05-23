@@ -49,7 +49,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git, archlinux, colored-man-pages, cp, colorize, command-not-found, compleat, dircycle, zsh-syntax-highlighting)
+plugins=(git, archlinux, colored-man-pages, cp, colorize, command-not-found, compleat, dircycle)
 
 # User configuration
 
