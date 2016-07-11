@@ -7,5 +7,6 @@
 	default = simple
 [core]
 	autocrlf = input
+	editor = vim
 [merge]
 	tool = meld
