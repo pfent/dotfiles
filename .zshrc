@@ -89,3 +89,6 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# OPAM configuration
+. /home/philipp/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
