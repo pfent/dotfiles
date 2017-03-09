@@ -17,7 +17,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(git, archlinux, colored-man-pages, cp, colorize, command-not-found, compleat, dircycle)
+plugins=(git, archlinux, colored-man-pages, cp, colorize, compleat, dircycle, common-aliases)
 
 # User configuration
 export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -26,7 +26,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export EDITOR='vim'
 export PAGER='vimpager'
 alias less=$PAGER
-alias rm='noglob timeout 3 rm -Iv --one-file-system'
+alias rm='rm -Iv --one-file-system'
 
 ZSH_CACHE_DIR=$HOME/.oh-my-zsh-cache
 if [[ ! -d $ZSH_CACHE_DIR ]]; then

@@ -1,12 +1,18 @@
 DIR := $(shell pwd)
 all: pacman unprivileged
-unprivileged: zsh mpv git vim X
-.PHONY: zsh mpv git vim pacman X
+unprivileged: zsh mpv ranger git vim X
+.PHONY: zsh mpv ranger git vim pacman X
 zsh: 
 	ln -sf $(DIR)/.zshrc ${HOME}/.zshrc
 	ln -sf $(DIR)/.zshenv ${HOME}/.zshenv
 mpv:
 	ln -sf $(DIR)/.config/mpv/mpv.conf ${HOME}/.config/mpv/mpv.conf
+ranger:
+	ln -sf $(DIR)/.config/ranger/commands.py ${HOME}/.config/ranger/commands.py
+	ln -sf $(DIR)/.config/ranger/commands_full.py ${HOME}/.config/ranger/commands_full.py
+	ln -sf $(DIR)/.config/ranger/rc.conf ${HOME}/.config/ranger/rc.conf
+	ln -sf $(DIR)/.config/ranger/rifle.conf ${HOME}/.config/ranger/rifle.conf
+	ln -sf $(DIR)/.config/ranger/scope.sh ${HOME}/.config/ranger/scope.sh
 pacman:
 	sudo ln -sf $(DIR)/makepkg.conf /etc/makepkg.conf
 	sudo ln -sf $(DIR)/pacman.conf /etc/pacman.conf
