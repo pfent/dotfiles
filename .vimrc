@@ -1,6 +1,7 @@
-" Use the Solarized Dark theme
+" Use the dark theme
 set background=dark
 
+colorscheme molokai
 " Make Vim more useful
 set nocompatible
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
@@ -41,7 +42,7 @@ set secure
 " Enable line numbers
 set number
 " Enable syntax highlighting
-syntax on
+syntax enable
 " Highlight current line
 set cursorline
 " Make tabs as wide as two spaces
