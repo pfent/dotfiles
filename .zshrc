@@ -26,7 +26,13 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export EDITOR='vim'
 export PAGER='vimpager'
 alias less=$PAGER
+
+# Safeguard for rouge rm commands
 alias rm='rm -Iv --one-file-system'
+# Better sudo experiance by passing environment variables
+alias sudo='sudo -E'
+# Check if any packages could be installed as dependencies
+alias pacman-check-explicitDeps='for pkg in $(pacaur -Qeq); do pactree $pkg --reverse; done | grep "[└├]" --before-context=1'
 
 ZSH_CACHE_DIR=$HOME/.oh-my-zsh-cache
 if [[ ! -d $ZSH_CACHE_DIR ]]; then

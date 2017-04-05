@@ -1,5 +1,8 @@
 " Use the dark theme
 set background=dark
+let g:molokai_original = 1
+let g:rehash256 = 1
+
 
 colorscheme molokai
 " Make Vim more useful
