@@ -34,7 +34,7 @@ alias sudo='sudo -E'
 # Check if any packages could be installed as dependencies
 alias pacman-check-explicitDeps='for pkg in $(pacaur -Qeq); do pactree $pkg --reverse; done | grep "[└├]" --before-context=1'
 # More colors for ls
-ls () { exa $argv }
+ls () { exa $@ }
 
 ZSH_CACHE_DIR=$HOME/.oh-my-zsh-cache
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
@@ -93,3 +93,5 @@ zle -N                 cdParentKey
 zle -N                 cdUndoKey
 bindkey '^[[1;3A'      cdParentKey
 bindkey '^[[1;3D'      cdUndoKey
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
