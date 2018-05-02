@@ -94,4 +94,10 @@ zle -N                 cdUndoKey
 bindkey '^[[1;3A'      cdParentKey
 bindkey '^[[1;3D'      cdUndoKey
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# fzf auto-completion
+# ---------------
+[[ $- == *i* ]] && source "/usr/share/fzf/completion.zsh" 2> /dev/null
+# fzf key bindings
+# ------------
+source "/usr/share/fzf/key-bindings.zsh"
+
