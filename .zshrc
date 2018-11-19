@@ -32,9 +32,10 @@ alias rm='rm -Iv --one-file-system'
 # Better sudo experiance by passing environment variables
 alias sudo='sudo -E'
 # Check if any packages could be installed as dependencies
-alias pacman-check-explicitDeps='for pkg in $(pacaur -Qeq); do pactree $pkg --reverse; done | grep "^[└├]" --before-context=1 | grep "^[a-zA-Z]"'
+alias pacman-check-explicitDeps='for pkg in $(yay -Qeq); do pactree $pkg --reverse; done | grep "^[└├]" --before-context=1 | grep "^[a-zA-Z]"'
 # More colors for ls
 ls () { exa $@ }
+alias gdb=cgdb
 
 ZSH_CACHE_DIR=$HOME/.oh-my-zsh-cache
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
