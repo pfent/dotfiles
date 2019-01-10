@@ -45,6 +45,7 @@ fi
 source $ZSH/oh-my-zsh.sh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/doc/pkgfile/command-not-found.zsh # command not found suggestions
+source /etc/profile.d/autojump.zsh
 
 # display the starting time of the currently running commend. Useful for long running ones
 # see: http://stackoverflow.com/a/26585789
