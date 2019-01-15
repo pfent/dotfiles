@@ -1,7 +1,7 @@
 DIR := $(shell pwd)
 all: pacman unprivileged
-unprivileged: zsh mpv ranger git vim X
-.PHONY: zsh mpv ranger git vim pacman X
+unprivileged: zsh mpv ranger git vim X gdb
+.PHONY: zsh mpv ranger git vim pacman X gdb
 zsh: 
 	ln -sf $(DIR)/.zshrc ${HOME}/.zshrc
 	ln -sf $(DIR)/.zshenv ${HOME}/.zshenv
@@ -23,3 +23,5 @@ vim:
 	ln -sf $(DIR)/.vimrc ${HOME}/.vimrc
 X:
 	ln -sf $(DIR)/.xinitrc ${HOME}/.xinitrc
+gdb:
+	ln -sf $(DIR)/.gdbinit ${HOME}/.gdbinit
