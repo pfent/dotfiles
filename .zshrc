@@ -17,7 +17,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(git, archlinux, colored-man-pages, cp, colorize, compleat, dircycle, common-aliases)
+plugins=(git archlinux colored-man-pages cp colorize compleat dircycle common-aliases)
 
 # User configuration
 export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -45,7 +45,6 @@ fi
 source $ZSH/oh-my-zsh.sh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/doc/pkgfile/command-not-found.zsh # command not found suggestions
-source /etc/profile.d/autojump.zsh
 
 # display the starting time of the currently running commend. Useful for long running ones
 # see: http://stackoverflow.com/a/26585789
@@ -102,4 +101,10 @@ bindkey '^[[1;3D'      cdUndoKey
 # fzf key bindings
 # ------------
 source "/usr/share/fzf/key-bindings.zsh"
+
+# disable XON/XOFF flow control (C-s)
+stty -ixon
+
+# asan should always break in GDB instead of calling terminate
+ASAN_OPTIONS=abort_on_error=1
 
