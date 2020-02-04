@@ -106,4 +106,11 @@ if has("autocmd")
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 	" Treat .md files as Markdown
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
+	" Enable spellchecking for text-like formats
+	au BufReadPost,BufNewFile *.md,*.txt,*.tex set spell
 endif
+
+" vim-plug plugins https://github.com/junegunn/vim-plug
+call plug#begin()
+Plug 'https://github.com/rhysd/vim-grammarous.git'
+call plug#end()
